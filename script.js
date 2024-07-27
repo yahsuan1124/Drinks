@@ -147,36 +147,6 @@ function boba(){
 
 
 
-
-// ===================================
-// =======滑鼠往下滾，產品漸入========
-// ===================================
-document.addEventListener("scroll", function () {
-  const contents = document.querySelectorAll(".content");
-  const triggerBottom = (window.innerHeight / 5) * 4;
-
-  contents.forEach((content) => {
-    const contentTop = content.getBoundingClientRect().top;
-
-    if (contentTop < triggerBottom) {
-      content.classList.add("show");
-    } else {
-      content.classList.remove("show");
-    }
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
 // ===================================
 // ==============輪播圖===============
 // ===================================
