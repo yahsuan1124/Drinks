@@ -623,7 +623,6 @@ h4:active {
 /* The Close Button */
 .close {
     position: absolute;
-    right: 35%; */
     color: #adababc9;
     font-size: 4vw;
     font-weight: bold;
@@ -680,7 +679,6 @@ h4:active {
   
 .item {
     position: relative;
-    /*相對位置*/
 }
 
 .text {
@@ -705,13 +703,13 @@ h4:active {
 
 .item:hover .text {
     opacity:0.9;
-    /* width: 30%; */
 }
 
 .line-height{
     line-height: 190%;
     font-size: 1.5vw;
 }
+
 
 
 
@@ -775,7 +773,6 @@ h3{font-size: 2vw;}
 .input-label{
     display: inline-block;
     margin:2%;
-    /* font-size: 2vw; */
 }
 .input-style{
     height: 40px;
@@ -936,7 +933,6 @@ h3{font-size: 2vw;}
 
 .share-text{
     margin:auto;
-    /* background-color: burlywood; */
     font-size: 1.5vw;
     word-spacing:1%;
     line-height: 160%;
