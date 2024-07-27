@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喝口感/珍珠-Hsuan's Drinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+TC&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="clearfix" style="position: relative">
+        <h1><a href="./index.html">Hsuan's Drinks</a></h1>
+        <!-- 導覽列+下拉選單 -->
+        <nav>
+            <ul class="inline-block-nav">
+                <div class="dropdown"><a href="./original.html">喝原味</a></div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="#">喝口感</a></div>
+                    <div class="dropdown-content">
+                        <a href="./boba.html">珍珠</a>
+                        <a href="./taro.html">其他</a>
+                    </div>
+                </div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="./milk.html">喝香醇</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./milktea.html">奶精</a>
+                        <a href="./milk.html">鮮奶</a>
+                    </div> -->
+                </div>
+
+                <div class=" dropdown"><a href="./fresh.html">喝新鮮</a></div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="./limited.html">喝限定</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./spring.html">春</a>
+                        <a href="./summer.html">夏</a>
+                        <a href="./autumn.html">秋</a>
+                        <a href="./winter.html">冬</a>
+                    </div> -->
+                </div>
+                <div class=" dropdown"><a href="./random.html">專屬推薦</a></div>
+                <div class=" dropdown"><a href="./contact.html">與我分享</a></div>
+            </ul>
+        </nav>
+        <div class="mobile-menu" onclick="rightTitle()">
+            <i class="fa-solid fa-list-ul"></i>
+        </div>
+
+        <div class="myRightList" id="rightList">
+            <div class="rightList-container textAlign">
+                <a href="./original.html">喝原味</a>
+                <button class="dropdown-btn" onclick="boba()" style="padding:5%">喝口感
+                    <i class="fa fa-caret-down" onclick="boba()"></i>
+                </button>
+                <div class="dropdown-container" id="myDrop_btn">
+                    <a href="./boba.html">喝口感-珍珠</a><br>
+                    <a href="./taro.html">喝口感-其他</a>
+                </div>
+                
+                <a href="./milk.html" >喝香醇</a>
+                <a href="./fresh.html" >喝新鮮</a>
+                <a href="./limited.html" >喝限定</a>
+                <a href="./random.html" >專屬推薦</a>
+                <a href="./contact.html" >與我分享</a>
+            </div>                   
+        </div>
+
+    </header>
+
+    <div class="original-bg-image">
+        <!-- 測試麵包屑+標題 -->
+        <div class="title-container">
+            <div class="bread">
+                <ul>
+                    <li><a href="./index.html">首頁</a></li>
+                    <li>喝口感</li>
+                    <li>喝珍珠</li>
+                </ul>
+            </div>
+            <h1 class="share-title animate__animated animate__fadeInUp">喝口感</h1>
+
+        </div>
+
+        <div class="padding-left-right">
+            <h2 class="margin-left margin-bottom">今天喝什麼?</h2>
+            <h3 class="margin-left margin-bottom animate__animated animate__fadeInLeft">以下是珍珠控不能錯過的手搖飲!!</h3>
+            <div class="product-container">
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/50嵐珍波椰.webp" alt="" width="50%" class="product-padding myImg" id="myImg">
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.facebook.com/p/50%E5%B5%90-%E4%B8%AD%E5%8D%80-100076062604036/?paipv=0&eav=AfbCPlIiamtdYB1dg1XR7FiT5QY3dxPFntq9_YxqC9sI6am-h7JGnqwIw7HbKOcM5uY&_rdr"><h4 >50嵐-1號珍波椰青茶</h4></a>
+                            <p class="product-context">有著四季春的清香，大方搭配爽脆椰果、Q彈珍珠、飽滿波霸，口感超豐富，重點是高CP值，一舉擄獲咀嚼控!</p>
+                        </div>
+                    </div>
+                
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/珍煮丹-黑糖珍珠鮮奶.jpg" alt="" width="50%" class="product-padding myImg" id="myImg2">
+                            <!-- The Modal -->
+                            <div id="myModal2" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img02">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.truedan.com.tw/product.php"><h4>珍煮丹-黑糖珍珠鮮奶</h4></a>                            
+                            <p class="product-context">「黑糖珍珠鮮奶」是珍煮丹的招牌飲品！黑糖珍珠採每日現做，0.85 公分嚼勁十足，搭配嚴選小農鮮奶，奶香與黑糖香交融，令人感到滿滿的幸福。</p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+
+            <div class="product-container">
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/龜記Guiji-珍珠紅烏鮮乳.jpg" alt="" width="50%" class="product-padding myImg" id="myImg3">
+                            <!-- The Modal -->
+                            <div id="myModal3" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img03">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://guiji-group.com/"><h4>龜記Guiji-珍珠紅烏鮮乳</h4></a>                            
+                            <p class="product-context">獨家的黃金珍珠,那一顆顆晶瑩剔透的珍珠,口感彈有勁,還略帶點蜂蜜香,讓整杯紅烏鮮乳,喝起來更加有層次,適合喜歡咀嚼珍珠的你!</p>
+                        </div>
+                    </div>
+                
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/小茶齋-岩漿珍珠鮮奶.jpg" alt="" width="50%" class="product-padding myImg" id="myImg4">
+                            <!-- The Modal -->
+                            <div id="myModal4" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img04">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.facebook.com/siaochazhai"><h4>小茶齋-岩漿珍珠鮮奶</h4></a>                            
+                            <p class="product-context">手炒黑糖與鮮乳，搭配蜜糖Q珍珠，喝起來是非常的順口。另款，「厚漿珍珠鮮奶」裡面多加了「鮮奶油」，喝起來甜度和奶味都會比起「岩漿」濃厚一點喲。</p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+
+            <div class="product-container">
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/迷客夏-珍珠紅茶拿鐵.jfif" alt="" width="50%" class="product-padding myImg" id="myImg5">
+                            <!-- The Modal -->
+                            <div id="myModal5" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img05">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.milksha.com/"><h4>迷客夏Miiksha-珍珠紅茶拿鐵</h4></a>                            
+                            <p class="product-context">珍珠是使用蜂蜜蜜漬的白玉珍珠，門市每天熬煮備製，經過多次冷水降溫，像幫珍珠做三溫暖，創造出Q彈口感的白玉珍珠</p>
+                        </div>
+                    </div>
+                
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/春水堂-珍珠奶茶.jpg" alt="" width="50%" class="product-padding myImg" id="myImg6">
+                            <!-- The Modal -->
+                            <div id="myModal6" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img06">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.chunshuitang.com.tw/"><h4>春水堂-珍珠奶茶</h4></a>                            
+                            <p class="product-context">春水堂的小顆黑珍珠以樹薯粉全程低溫製成，不添加防腐劑，用零反式脂肪奶精調合，小巧Q彈的口感和濃郁茶香的奶茶融合，好喝得無法罷手。</p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- 右邊固定社群 -->
+        <div class="icon-bar">
+            <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#"><i class="fa-solid fa-up-long"></i></a>
+        </div>
+
+
+    </div>
+    
+
+    <footer>
+        <h2>Hsuan's Drinks<span><img src="./images/drinks.png" alt="" width="50" style="margin-left: 8px;"></span></h2>
+        <div class="social-icon clearfix">
+            <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+        <div class="copyright"> &copy; 僅供參考 Peng Ya-Hsuan</div>
+    </footer>
+
+    <!-- 插入JS -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

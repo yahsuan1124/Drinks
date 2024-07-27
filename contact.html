@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>與我分享-Hsuan's Drinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+TC&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="share-bg-image">
+      <header class="clearfix" style="position: relative">
+        <h1><a href="./index.html">Hsuan's Drinks</a></h1>
+        <!-- 導覽列+下拉選單 -->
+        <nav>
+          <ul class="inline-block-nav">
+            <div class="dropdown"><a href="./original.html">喝原味</a></div>
+            <div class="dropdown">
+              <div class="dropbtn"><a href="#">喝口感</a></div>
+              <div class="dropdown-content">
+                <a href="./boba.html">珍珠</a>
+                <a href="./taro.html">其他</a>
+              </div>
+            </div>
+            <div class=" dropdown">
+                    <div class="dropbtn"><a href="./milk.html">喝香醇</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./milktea.html">奶精</a>
+                        <a href="./milk.html">鮮奶</a>
+                    </div> -->
+                </div>
+            <div class="dropdown"><a href="./fresh.html">喝新鮮</a></div>
+            <div class="dropdown">
+              <div class="dropbtn"><a href="./limited.html">喝限定</a></div>
+              <!-- <div class="dropdown-content">
+                <a href="./spring.html">春</a>
+                <a href="./summer.html">夏</a>
+                <a href="./autumn.html">秋</a>
+                <a href="./winter.html">冬</a>
+              </div> -->
+            </div>
+            <div class=" dropdown"><a href="./random.html">專屬推薦</a></div>
+            <div class="dropdown"><a href="./contact.html">與我分享</a></div>
+          </ul>
+        </nav>
+        <div class="mobile-menu" onclick="rightTitle()">
+            <i class="fa-solid fa-list-ul"></i>
+        </div>
+
+        <div class="myRightList" id="rightList">
+            <div class="rightList-container textAlign">
+                <a href="./original.html">喝原味</a>
+                <button class="dropdown-btn" onclick="boba()" style="padding:5%">喝口感
+                    <i class="fa fa-caret-down" onclick="boba()"></i>
+                </button>
+                <div class="dropdown-container" id="myDrop_btn">
+                    <a href="./boba.html">喝口感-珍珠</a><br>
+                    <a href="./taro.html">喝口感-其他</a>
+                </div>
+                
+                <a href="./milk.html" >喝香醇</a>
+                <a href="./fresh.html" >喝新鮮</a>
+                <a href="./limited.html" >喝限定</a>
+                <a href="./random.html" >專屬推薦</a>
+                <a href="./contact.html" >與我分享</a>
+            </div>                   
+        </div>
+      </header>
+
+      <!-- 測試麵包屑+標題 -->
+        <div class="title-container">
+            <div class="bread">
+                <ul>
+                    <li><a href="./index.html">首頁</a></li>
+                    <li>與我分享</li>
+                </ul>
+            </div>
+            <h1 class="share-title animate__animated animate__fadeInUp">與我分享</h1>
+        </div>
+
+      <!-- 引言 -->
+      <div class=" w-70 share-text">
+        這裡不僅僅是一個分享平台，更是一個共同成長的機會。您的每一句話，每一張圖片，都是我們的共同努力的一部分。我們相信，通過您的分享，我們將能夠更深入地了解您的需求和期望，並將它們轉化為更好的服務和產品。我們期待著與您攜手並肩，一同見證我們的成長和進步。
+      </div>
+
+      <!-- 表單 -->
+      <div class="clearfix">
+        <form action="" class="w-80 float-right margin-bottom" style="font-size: 1.5vw;">
+          <lebel for="name" class="myLebel">姓名</lebel>
+          <input type="text" name="name" required />
+          <br />
+          <lebel for="phone">電話</lebel>
+          <input type="tel" name="phone" required />
+          <br />
+          <lebel for="mail">電子信箱</lebel>
+          <input type="email" name="mail" required />
+          <br />
+          <p>性別</p>
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">男性</label>
+          <input type="radio"id="female"name="gender"value="female"required />
+          <label for="female">女性</label>
+          <br />
+          <lebel>留言類型</lebel><br />
+          <select name="text-type" id="">
+            <option value="">店家廣告</option>
+            <option value="">推薦店家</option>
+            <option value="">推薦飲料</option>
+            <option value="">其他建議</option>
+          </select>
+          <br />
+          <lebel>想說的話</lebel>
+          <textarea name="" id="" rows="10" required></textarea>
+          <div style="text-align: right; width: 80%">
+            <button class="submit">送出表單</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- 右邊固定社群 -->
+        <div class="icon-bar">
+            <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#"><i class="fa-solid fa-up-long"></i></a>
+        </div>
+    </div>
+
+    <footer>
+      <h2>
+        Hsuan's Drinks<span
+          ><img
+            src="./images/drinks.png"
+            alt=""
+            width="50"
+            style="margin-left: 8px"
+        /></span>
+      </h2>
+      <div class="social-icon clearfix">
+        <a href="http://www.facebook.com/"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/accounts/login/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.threads.net"
+          ><i class="fa-brands fa-threads"></i
+        ></a>
+        <a href="https://mail.google.com"
+          ><i class="fa-regular fa-envelope"></i
+        ></a>
+      </div>
+
+      <div class="copyright">&copy; 僅供參考 Peng Ya-Hsuan</div>
+    </footer>
+
+    <!-- 插入JS -->
+    <script src="./script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hsuan's Drinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+TC&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="clearfix" style="position: relative">
+        <h1><a href="./index.html">Hsuan's Drinks</a></h1>
+
+        <!-- 導覽列+下拉選單 -->
+        <nav>
+            <ul class="inline-block-nav">
+                <div class="dropdown"><a href="./original.html">喝原味</a></div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="#">喝口感</a></div>
+                    <div class="dropdown-content">
+                        <a href="./boba.html">珍珠</a>
+                        <a href="./taro.html">其他</a>
+                    </div>
+                </div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="./milk.html">喝香醇</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./milktea.html">奶精</a>
+                        <a href="./milk.html">鮮奶</a>
+                    </div> -->
+                </div>
+
+                <div class=" dropdown"><a href="./fresh.html">喝新鮮</a></div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="./limited.html">喝限定</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./spring.html">春</a>
+                        <a href="./summer.html">夏</a>
+                        <a href="./autumn.html">秋</a>
+                        <a href="./winter.html">冬</a>
+                    </div> -->
+                </div>
+                <div class=" dropdown"><a href="./random.html">專屬推薦</a></div>
+                <div class=" dropdown"><a href="./contact.html">與我分享</a></div>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu" onclick="rightTitle()">
+            <i class="fa-solid fa-list-ul"></i>
+        </div>
+
+        <div class="myRightList" id="rightList">
+            <div class="rightList-container textAlign">
+                <a href="./original.html">喝原味</a>
+                <button class="dropdown-btn" onclick="boba()" style="padding:5%">喝口感
+                    <i class="fa fa-caret-down" onclick="boba()"></i>
+                </button>
+                <div class="dropdown-container" id="myDrop_btn">
+                    <a href="./boba.html">喝口感-珍珠</a><br>
+                    <a href="./taro.html">喝口感-其他</a>
+                </div>
+                
+                <a href="./milk.html" >喝香醇</a>
+                <a href="./fresh.html" >喝新鮮</a>
+                <a href="./limited.html" >喝限定</a>
+                <a href="./random.html" >專屬推薦</a>
+                <a href="./contact.html" >與我分享</a>
+            </div>                   
+        </div>
+
+
+    </header>
+
+    <!-- 網頁一打開會跑出來的視窗 -->
+    <div id="followNotice">
+        <div class="followNotice-bg"  >
+            <!-- 下一個div是一定要包著，不然標題和icon會並排，但不用設定css， -->
+            <div >
+                <h1 class="followNotice-title">Hsuan's Drinks</h1>
+                <div class="followNotice-text">記得追蹤我的社群，搶先獲得第一手的優惠喔!!</div>
+                <div class="social-icon clearfix" style="margin-top: 10px;">
+                    <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+                    <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+    <!-- 輪播圖W3 -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./images/小茶齋.JPG" style="width: 100%;">
+            <!-- <div class="text">Caption Text</div> -->
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./images/新井茶banner.png" style="width:100%">
+            <!-- <div class="text">Caption Two</div> -->
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./images/甘蔗媽媽banner.JPG" style="width:100%">
+             <!-- <div class="text">Caption Three</div> -->
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./images/茶湯會-1banner.jpg" style="width:100%">
+            <!-- <div class="text">Caption Three</div> -->
+        </div>
+
+        <!-- Next and previous buttons -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center ">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+
+
+
+
+    <!-- 關於我 -->
+    <div class="bg-color" style="margin-top: 80px;">
+        <div class="text-center about-me">
+            <img src="./images/flower-1.png" alt="" width="35">
+            <h2>關於我</h2>
+            <img src="./images/flower-1.png" alt="" width="35">
+        </div>
+        <div class="text-center">
+            <div class="padding-bottom" style="font-size: 1.5vw;line-height: 180%;">如果有一件事你必須知道關於我，那就是我是一個真正的飲料愛好者。<br>
+                對我來說，每天喝飲料就像呼吸一樣重要，實在無法想像沒有手搖飲的日子!! <br>
+                飲料不僅僅是消暑或者提神，更是每天生活中的小確幸，讓我感受到生活的美好和多姿多彩。
+            </div>
+        </div>
+    </div>
+
+    <!-- 關於我 底下的照片 -->
+    <div style="display:flex; margin-bottom: 80px;">
+        <div class="margin-drinks w-16" style="margin:0.3%;">
+            <img src="./images/青柚茶事.png" alt="" width="100%" >
+        </div>
+        <div class=" margin-drinks w-16" style="margin:0.3%;">
+            <img src="./images/御香屋.png" alt="" width="100%">
+        </div>
+        <div class=" margin-drinks w-16" style="margin:0.3%;">
+            <img src="./images/拾汣茶屋.png" alt="" width="100%">
+        </div>
+        <div class="margin-drinks w-16" style="margin:0.3%;">
+            <img src="./images/東洲.png" alt="" width="100%">
+        </div>
+        <div class="margin-drinks w-16" style="margin:0.3%;">
+            <img src="./images/約翰紅茶.png" alt="" width="100%">
+        </div>
+        <div class="margin-drinks w-16" style="margin:0.3%;">
+            <img src="./images/coffee-tea-or.png" alt="" width="100%">
+        </div>
+    </div>
+
+
+    <div class="container-bg">
+        <div class="container">
+            <!-- 最新消息 -->
+            <h2>最新消息
+                <span class="fa-solid fa-bullhorn"></span>
+            </h2>
+            <div class="wrap">
+                <div class="clearfix color-black item flex-center newsImg-container" >
+                    <img src="./images/coco-news.jpg" alt="" width=30% class="newsImg">
+                    <div class="float-right w-70 margin-left line-height newsText"><b>~~CoCo 都可~~</b><br>
+                        一年一度 #都可生日慶 即將到來.ᐟ.ᐟ.ᐟ<br>
+                        歡慶CoCo27歲🎂🎂超殺優惠帶給你<br>
+                        👑27th #都可日 👑<br>
+                        ⭐活動期間｜5/9(四)~5/12(日)(各店選2天活動日)<br>
+                        ⭐活動商品｜🧡百香雙響炮 特價$40🤩&nbsp;&nbsp;🧡檸檬奇遇桔 特價$30🍋<br>
+                        ⭐活動門市時間表｜ https://reurl.cc/oRQOQM(商場及部分門市不參與活動，詳請見活動列表)
+                    </div>
+                    <a href="https://www.facebook.com/cocofreshtea.tw/">
+                        <div class="text flex-center">點進來了解詳情</div>
+                    </a>
+                    
+                    
+                </div>
+                <hr>
+                <div class="clearfix color-black item flex-center newsImg-container">
+                    <img src="./images/wootea-news.jpg" alt="" width=30% class="newsImg">
+                    <div class="float-right w-70 margin-left line-height newsText"> <b>~~五桐號~~</b><br>
+                        🧊夏日輕飲.ᐟ.ᐟ 全民「凍」起來.ᐟ&nbsp;𝗨𝗯𝗲𝗿𝗘𝗮𝘁𝘀 指定品項。買 𝟭 送 𝟭 🥤🥤<br>
+                        ・期間限定｜𝟮𝟬𝟮𝟰.𝟬𝟱.𝟬𝟴 - 𝟮𝟬𝟮𝟰.𝟬𝟱.𝟮𝟭<br>
+                        ❶ 荔枝冰茶凍飲 ❷ 綠茶多多凍飲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        炎炎夏季，酸甜滋味Double給你 (๑´ڡ`๑)<br>
+                        👑農摘系列人氣王 #荔枝冰茶凍飲<br>
+                        🌟遇上多多，快樂多多 #綠茶多多凍飲
+                    </div>
+                    <a href="https://www.facebook.com/WooTeaTW/?locale=zh_TW">
+                        <div class="text">點進來了解詳情</div>
+                    </a>
+                </div>
+                <hr>
+                <div class="clearfix color-black item flex-center line-height newsImg-container">
+                    <img src="./images/功夫茶.jpg" alt="" width=30% class="newsImg">
+                    <div class="float-right w-70 margin-left newsText"><b>~~手作功夫茶~~</b><br>
+                        ＼優惠𝐂𝐨𝐦𝐢𝐧𝐠！／就是 #桃你開心🍑 ​𝐂𝐀𝐑𝐎𝐋 𝐌𝐄𝐀𝐓 × 𝐊𝐔𝐍𝐆 𝐅𝐔 𝐓𝐄𝐀 <br>
+                        #蜜桃胭脂紅茶 𝘗𝘦𝘢𝘤𝘩 𝘉𝘭𝘢𝘤𝘬 𝘛𝘦𝘢 <br>
+                        蜜桃香氣淡雅！茶韻更迷人～<br>
+                        來一杯清爽的「蜜桃胭脂紅茶」解渴！告別涼爽的天氣，迎接炎熱的夏天到來🌤️<br>
+                        ︵‿︵ 波波冰狗室．聯名保冰袋新登場！<br>
+                        𝟱.𝟭𝟯起 #聯名保冰袋 只送不賣✨錯過不再！
+                    </div>
+                    <a href="https://www.facebook.com/Kungfutea">
+                        <div class="text">點進來了解詳情</div>
+                    </a>
+                </div>
+                <hr>
+                <div class="clearfix color-black item flex-center line-height newsImg-container">
+                    <img src="./images/春芳號.jpg" alt="" width=30% class="newsImg">
+                    <div class="float-right w-70 margin-left newsText"><b>~~春芳號~~</b><br>
+                        🇬🇧🇬🇧慶英國倫敦店開幕.倫敦杯上市🇬🇧🇬🇧 <br>
+                        【🙋‍♀️英國倫敦尋人啟示🙋‍♂️】&nbsp;&nbsp;✨用姓名來享受飲料優惠吧✨ <br>
+                        活動詳情🎉: 活動期間姓名有「英」「國」「倫」「敦」<br>
+                        任一字來店出示證件消費即享88折優惠(最多六杯)。<br>
+                        活動時間🕦:5/20(一)~5/31(五) <br>
+                    </div>
+                    <a href="https://www.facebook.com/chunfunhow8">
+                        <div class="text">點進來了解詳情</div>
+                    </a>
+                </div>
+                <hr>
+                <div class="clearfix color-black item flex-center line-height newsImg-container">
+                    <img src="./images/萬波.jpg" alt="" width=30% class="newsImg">
+                    <div class="float-right w-70 margin-left newsText"><b>~~萬波~~</b><br>
+                        #春橙系列 選用新鮮柳丁果肉，且有農糧署生產履歷認證🤝<br>
+                        即日起凡點「春橙系列」現場來店消費、電話自取或外送即享8折優惠<br>
+                        ↁ數量有限，售完為止<br>
+                        ↁ線上平台/外送平台皆不適用<br>
+                        👉春橙翡翠、春橙愛玉、春橙烏龍
+                    </div>
+                    <a href="https://www.facebook.com/wanpotea.com.tw/?locale=zh_TW">
+                        <div class="text">點進來了解詳情</div>
+                    </a>
+                </div>
+                <hr>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- 右邊固定社群 -->
+    <div class="icon-bar">
+        <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+        <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+        <a href="#"><i class="fa-solid fa-up-long"></i></a>
+    </div>
+
+
+    <footer>
+        <h2>Hsuan's Drinks<span><img src="./images/drinks.png" alt="" width="50" style="margin-left: 8px;"></span></h2>
+        <div class="social-icon clearfix">
+            <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+        <div class="copyright"> &copy; 僅供參考 Peng Ya-Hsuan</div>
+    </footer>
+
+
+    <!-- 插入JS -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

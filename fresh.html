@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喝新鮮-Hsuan's Drinks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif+TC&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="clearfix" style="position: relative">
+        <h1><a href="./index.html">Hsuan's Drinks</a></h1>
+        <!-- 導覽列+下拉選單 -->
+        <nav>
+            <ul class="inline-block-nav">
+                <div class="dropdown"><a href="./original.html">喝原味</a></div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="#">喝口感</a></div>
+                    <div class="dropdown-content">
+                        <a href="./boba.html">珍珠</a>
+                        <a href="./taro.html">其他</a>
+                    </div>
+                </div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="./milk.html">喝香醇</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./milktea.html">奶精</a>
+                        <a href="./milk.html">鮮奶</a>
+                    </div> -->
+                </div>
+
+                <div class=" dropdown"><a href="./fresh.html">喝新鮮</a></div>
+
+                <div class=" dropdown">
+                    <div class="dropbtn"><a href="./limited.html">喝限定</a></div>
+                    <!-- <div class="dropdown-content">
+                        <a href="./spring.html">春</a>
+                        <a href="./summer.html">夏</a>
+                        <a href="./autumn.html">秋</a>
+                        <a href="./winter.html">冬</a>
+                    </div> -->
+                </div>
+                <div class=" dropdown"><a href="./random.html">專屬推薦</a></div>
+                <div class=" dropdown"><a href="./contact.html">與我分享</a></div>
+            </ul>
+        </nav>
+        <div class="mobile-menu" onclick="rightTitle()">
+            <i class="fa-solid fa-list-ul"></i>
+        </div>
+
+        <div class="myRightList" id="rightList">
+            <div class="rightList-container textAlign">
+                <a href="./original.html">喝原味</a>
+                <button class="dropdown-btn" onclick="boba()" style="padding:5%">喝口感
+                    <i class="fa fa-caret-down" onclick="boba()"></i>
+                </button>
+                <div class="dropdown-container" id="myDrop_btn">
+                    <a href="./boba.html">喝口感-珍珠</a><br>
+                    <a href="./taro.html">喝口感-其他</a>
+                </div>
+                
+                <a href="./milk.html" >喝香醇</a>
+                <a href="./fresh.html" >喝新鮮</a>
+                <a href="./limited.html" >喝限定</a>
+                <a href="./random.html" >專屬推薦</a>
+                <a href="./contact.html" >與我分享</a>
+            </div>                   
+        </div>
+
+    </header>
+
+    <div class="milk-bg-image">
+        <!-- 測試麵包屑+標題 -->
+        <div class="title-container">
+            <div class="bread">
+                <ul>
+                    <li><a href="./index.html">首頁</a></li>
+                    <li>喝新鮮</li>
+                </ul>
+            </div>
+            <h1 class="share-title animate__animated animate__fadeInUp">喝新鮮</h1>
+        </div>
+
+        <div class="padding-left-right">
+            <h2 class="margin-left margin-bottom">今天喝什麼?</h2>
+            <h3 class="margin-left margin-bottom animate__animated animate__fadeInLeft">覺得純茶太單調嗎? 可以嘗試以下飲料，有不同的享受!</h3>
+            <div class="product-container">
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/迷克夏-青檸香茶.jfif" alt="" width="50%" class="product-padding myImg" id="myImg">
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.milksha.com/"><h4 >迷克夏-青檸香茶</h4></a>                            
+                            <p class="product-context">採用茉香綠茶加上檸檬皮（而不是檸檬汁），打造出具有檸檬香氣卻不酸的飲品，是怕酸的人品嚐檸檬飲品的好選擇。</p>
+                        </div>
+                    </div>
+                
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/大茗-蘋果玉露青.jpg" alt="" width="50%" class="product-padding myImg" id="myImg2">
+                            <!-- The Modal -->
+                            <div id="myModal2" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img02">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.facebook.com/p/%E5%A4%A7%E8%8C%97%E6%9C%AC%E4%BD%8D%E8%A3%BD%E8%8C%B6%E5%A0%82-100067777907132/?locale=zh_TW"><h4>大茗-蘋果玉露青</h4></a>                            
+                            <p class="product-context">使用招牌玉露青茶為基底，加入新鮮蘋果，清爽中散發著清新的蘋果香，融合的剛剛好!亮點是可以得到”蘋果日光變色杯”，照光後會長紅蘋果的杯子超級可愛！</p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+            <div class="product-container">
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/茶湯會-翡翠檸檬.jpg" alt="" width="50%" class="product-padding myImg" id="myImg3">
+                            <!-- The Modal -->
+                            <div id="myModal3" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img03">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://tw.tp-tea.com/"><h4>茶湯會-翡翠檸檬</h4></a>                            
+                            <p class="product-context">以嚴格條件篩選的檸檬製成，挑選關鍵在於白皮，去蕪存菁後保留屏東在地檸檬最好的酸氣，再加上香醇的翡翠綠茶，鮮香清爽的翡翠檸檬製作完成。</p>
+                        </div>
+                    </div>
+                
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/龜記-紅柚翡翠.jpg" alt="" width="50%" class="product-padding myImg" id="myImg4">
+                            <!-- The Modal -->
+                            <div id="myModal4" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img04">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://guiji-group.com/"><h4>龜記-紅柚翡翠</h4></a>                            
+                            <p class="product-context">每日手挖超限量的新鮮紅柚，果粒滿滿一口接一口，，與清香的翡翠綠茶完美結合，酸甜風味卻沒有柚皮的苦澀，一喝就上癮的好滋味！</p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+            <div class="product-container">
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/coco-百香果雙響炮.jpg" alt="" width="50%" class="product-padding myImg" id="myImg5">
+                            <!-- The Modal -->
+                            <div id="myModal5" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img05">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://www.facebook.com/cocofreshtea.tw/?locale=zh_TW"><h4>Coco-百香果雙響炮</h4></a>                            
+                            <p class="product-context">酸酸甜甜的百香果茶，吃得到百香果籽，為了增加口感，裡頭還有滿滿的高纖椰果及Q彈珍珠，酸甜又解膩又不怕負擔!</p>
+                        </div>
+                    </div>
+                
+                
+                    <div class="product-container-bg">
+                        <div class="image-container">
+                            <img src="./images/八曜和茶-柚香覺醒307.jpg" alt="" width="50%" class="product-padding myImg" id="myImg6">
+                            <!-- The Modal -->
+                            <div id="myModal6" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img06">
+                                <div id="caption"></div>
+                            </div>
+                        </div>
+                        <div class="product-context-container">
+                            <a href="https://8yotea.com/"><h4>八曜和茶-柚香覺醒307</h4></a>                            
+                            <p class="product-context">屬於果香系飲品，以307烏龍茶為基底，搭配新鮮完熟甜柚，酸甜的果肉與精緻細膩的茶香交織，喝起來就如同香水般帶有前後味的驚喜！</p>
+                        </div>
+                    </div>
+                
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- 右邊固定社群 -->
+        <div class="icon-bar">
+            <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="#"><i class="fa-solid fa-up-long"></i></a>
+        </div>
+
+
+    </div>
+    
+
+    <footer>
+        <h2>Hsuan's Drinks<span><img src="./images/drinks.png" alt="" width="50" style="margin-left: 8px;"></span></h2>
+        <div class="social-icon clearfix">
+            <a href="http://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.threads.net"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://mail.google.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+        <div class="copyright"> &copy; 僅供參考 Peng Ya-Hsuan</div>
+    </footer>
+
+    <!-- 插入JS -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
