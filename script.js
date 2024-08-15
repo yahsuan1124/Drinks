@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let x = document.getElementById("userInput").value;
     console.log(x);
-    let y = document.getElementById("recommendImg").src;
-    if (x === "") {
+    let y = document.getElementById("recommendImg")
+    if (x == "") {
       console.log(x + "第一行");
       recommend.innerText = "請輸入正確氣溫(單位：°C)";
       document.getElementById("recommendImg").style.display = "none";
@@ -90,22 +90,22 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(x + "第二行");
       document.getElementById("recommendImg").style.display = "block";
       recommend.innerText = lower[c];
-      y = document.getElementById("recommendImg").src = lowerImg[c];
+      y .src = lowerImg[c];
     } else if (x > 10 && x <= 18) {
       console.log(x + "第三行");
       document.getElementById("recommendImg").style.display = "block";
       recommend.innerText = low[c];
-      y = document.getElementById("recommendImg").src = lowImg[c];
+      y.src = lowImg[c];
     } else if (x > 18 && x <= 27) {
       console.log(x + "第四行");
       document.getElementById("recommendImg").style.display = "block";
       recommend.innerText = high[c];
-      y = document.getElementById("recommendImg").src = highImg[c];
+      y.src = highImg[c];
     } else if (x > 27 && x <= 45) {
       console.log(x + "第五行");
       document.getElementById("recommendImg").style.display = "block";
       recommend.innerText = higher[c];
-      y = document.getElementById("recommendImg").src = higherImg[c];
+      y.src = higherImg[c];
     } else {
       console.log(x + "第六行");
       recommend.innerText = "請輸入正確氣溫(單位：°C)";
@@ -184,26 +184,10 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+
 // ===================================
 // ==========輪播圖自動播放==============
 // ===================================
-
-// let slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {
-//     slideIndex = 1;
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
 
 let slideIndex = 0;
 showSlides();
@@ -215,19 +199,19 @@ function showSlides() {
 
   if (slides.length > 0) {
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+      slides[i].style.display = "none";  //所有照片先設隱藏
     }
     slideIndex++;
     if (slideIndex > slides.length) {
       slideIndex = 1;
     }
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active", ""); //移除點點的CSS：active
     }
 
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    dots[slideIndex - 1].className += " active";  //原本css類別再加上"active"
+    setTimeout(showSlides, 2000);   //2秒呼叫一次這個function
   }
 }
 
@@ -235,146 +219,19 @@ function showSlides() {
 // ===========點商品圖可以放大==========
 // ===================================
 
-// 圖片1
-// Get the modal
-var modal = document.getElementById("myModal");
+let images = document.getElementsByClassName("myImg");
+let modal = document.getElementById("myModal");
+let modalImg = document.getElementById("img01");
+let span = document.getElementsByClassName("close")[0]; // 確保選取的是正確的元素
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var imgapple = document.getElementById("myImg");
-// console.log(imgapple);
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener("click", function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  });
+}
 
-var modalImg = document.getElementById("img01");
-// var captionText = document.getElementById("caption");
-imgapple.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
+// 關閉 modal
 span.onclick = function () {
   modal.style.display = "none";
-};
-
-// 圖片2
-// Get the modal
-var modal = document.getElementById("myModal2");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg2");
-var modalImg = document.getElementById("img02");
-// var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[1];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// 圖片3
-// Get the modal
-var modal = document.getElementById("myModal3");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg3");
-var modalImg = document.getElementById("img03");
-// var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[2];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// 圖片4
-// Get the modal
-var modal = document.getElementById("myModal4");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg4");
-var modalImg = document.getElementById("img04");
-// var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[3];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// 圖片5
-// Get the modal
-var modal = document.getElementById("myModal5");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg5");
-var modalImg = document.getElementById("img05");
-// var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[4];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// 圖片6
-// Get the modal
-var modal = document.getElementById("myModal6");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg6");
-var modalImg = document.getElementById("img06");
-// var captionText = document.getElementById("caption");
-img.onclick = function () {
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  // captionText.innerHTML = this.alt;
-};
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[5];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-document.getElementsByClassName("myImg").onclick = function () {
-  for (i = 0; i < 5; i++) {
-    let apple = document.querySelectorAll("img");
-    if (apple.classList.contains("product-padding")) {
-      apple.setAttribute("id", "cat" + i);
-    }
-    console.log(apple);
-  }
 };
